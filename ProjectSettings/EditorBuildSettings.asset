@@ -6,10 +6,16 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Scenes/1 Start Scene.unity
+    guid: e6ac83bc87473ba48a0df1e124474145
+  - enabled: 1
+    path: Assets/Scenes/2 Intro Scene.unity
+    guid: a43c9d1286e147d4eb8416e3eaeae6e7
+  - enabled: 1
+    path: Assets/Scenes/TestScene.unity
+    guid: 0c902554a033c124c9ce76046a0e7d13
   m_configObjects:
-    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 44d5ad6befec28847b907b3b16fa570f,
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: b23d6caa675a78843b1a984d654ad2dd,
       type: 2}
-    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: a34ad50ae77c58f43b0635df561b7a9b,
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 39bc4da28b9d367449fee52b3a046074,
       type: 2}
