@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.632951, g: 0.23868087, b: 0.12571746, a: 1}
+  m_IndirectSpecularColor: {r: 0.6322366, g: 0.23650809, b: 0.12423304, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1708,7 +1708,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.015000928, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 3.207941, y: 1.4948745, z: 9.212551}
+  m_ConnectedAnchor: {x: 9.973629, y: 1.4991959, z: 2.8249993}
   serializedVersion: 2
   m_UseSpring: 0
   m_Spring:
@@ -2247,7 +2247,7 @@ GameObject:
   - component: {fileID: 842391546}
   - component: {fileID: 842391545}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
