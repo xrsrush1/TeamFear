@@ -1,35 +1,25 @@
-﻿title: SomaliaScript
-tags:
----
-
-===
-
-title: StartScene
-tags:
----
-
-<<declare $AminaVisted = false>>
-<<declare $AsadVisted = false>>
-
-===
-
-title: Amina
+﻿title: Amina
 tag:
 ---
+// <<declare $AminaVisted = false>>
+// <<declare $AsadVisted = false>>
 
 // Starting dialogue for the young girl "Amina" to explain the situation in Somalia to the User.
-<<if $AminaVisted is false>>
-    Welcome! My name is Amina. I was born here in Somalia, in the Lower Shabelle region. Since 2011, we've suffered the worst drought in 60 years, causing a devastating famine across the country. #line:002c036 
-    <<set $AminaVisted = true>>
-    Crops have died. Livestock have perished by the millions. Many lack access to sufficient food and clean water. As a result, nearly 260,000 Somalis have died, half of them children under 5. Every day, millions are on the knife's edge between life and death. #line:011a884 
+//<<if $AminaVisted is false>>
+    Welcome! My name is Amina. I was born here in Somalia, in the Lower Shabelle region. Since 2011, we've suffered the worst drought in 60 years, causing a devastating famine across the country. #line:Amina01 
+    //<<set $AminaVisted = true>>
+    Crops have died. Livestock have perished by the millions. Many lack access to sufficient food and clean water. As a result, nearly 260,000 Somalis have died, half of them children under 5. Every day, millions are on the knife's edge between life and death. #line:Amina02 
  
-    What you'll soon experience is based on real events from 2011 as Somalia descended into chaos. Ordinary people like me struggled daily to find enough food, water and safety. Outside this bunker, a man named Asad will guide you through similar life or death situations - searching for provisions, navigating violence and helping the vulnerable. #line:07d827e 
+    What you'll soon experience is based on real events from 2011 as Somalia descended into chaos. Ordinary people like me struggled daily to find enough food, water and safety. #line:Amina031 
+    Outside this bunker, a man named Asad will guide you through similar situations - searching for provisions, navigating violence and helping the vulnerable. #line:Amina032
  
-    I must warn you - what you'll experience may shock and disturb you deeply. But it's the sad reality my people face daily. I hope this simulation fosters understanding and empathy for the intense human suffering from the famine. Are you ready? Asad is waiting just outside to show you the grasping struggle for survival many Somalis endure. #line:01b0c31 
-<<else>>
+    I must warn you - what you'll experience may shock and disturb you deeply. But it's the sad reality my people face daily. I hope this simulation fosters understanding and empathy for the intense human suffering from the famine. #line:Amina04 
+    Are you ready? Asad is waiting just outside to show you the grasping struggle for survival many Somalis endure. #line:Amina05
+
+//<<else>>
     // Dialogue is Amina is visted twice.
-    Asad is waiting just outside to show you Somalia.
-<<endif>>
+    //Asad is waiting just outside to show you Somalia.
+//<<endif>>
 
 ===
 
@@ -38,11 +28,12 @@ tag:
 ---
 
 // Starting dialogue for the young boy "Asad", who is our guide to Somalia.
-<<if $AsadVisted is false>>
-    Hello, my name is Asad. I live here in the Lower Shabelle region, on the outskirts of the capital, Mogadishu. 
-    <<set $AsadVisted = true>>
-    I will take you with me on my daily life here in Somalia. Today, I have to collect water from the water pump, help rebuild houses that have been destroyed, and help look after my dad who is sick at home.
+//<<if $AsadVisted is false>>
+    Hello, my name is Asad. I live here in the Lower Shabelle region, on the outskirts of the capital, Mogadishu.  #line:0eb1ab2 
+    //<<set $AsadVisted = true>>
+    I will take you with me on my daily life here in Somalia.  #line:0ff49b9 
+    Today, I have to collect water from the water pump, help rebuild houses that have been destroyed, and help look after my dad who is sick at home. #line:0a34eb8 
 
     
-<<endif>>
+//<<endif>>
 ===
