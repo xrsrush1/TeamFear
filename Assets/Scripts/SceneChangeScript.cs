@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 public class SceneChangeScript : MonoBehaviour
 {
     //this script is used to change the scenes of the experience
-    public void LoadSomaliaScene()
+    public void LoadQuestionScene()
     {
-        SceneManager.LoadScene("3 Somalia Scene");
+        SceneManager.LoadScene("4 Question Scene");
     }
     //public void LoadTreasureHuntScene()
     //{
