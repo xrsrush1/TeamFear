@@ -19,7 +19,7 @@ public class AnimateAmina : MonoBehaviour
         {
             Debug.LogError("Amina Animator not set up", this);
         }
-        AminaAnimator.StopPlayback();
+        
     }
 
     // Update is called once per frame
@@ -30,16 +30,17 @@ public class AnimateAmina : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Player has collider with the AI trigger");
+        Debug.Log("Player has collided with the AI trigger");
 
 
         //if other is player
         if (other.gameObject.CompareTag("Player") && hasTalked == false)
         {
-            Debug.Log("Player will talk now");
+            Debug.Log("Amina will talk now");
 
             AminaAnimator.Play("Talking"); //starting the animator
-            Debug.Log("Player has started talking");
+
+            Debug.Log("Amina has started talking");
             hasTalked = true;
         }
     }

@@ -75,6 +75,32 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
+--- !u!1102 &699441197249160548
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Walk-Stop
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: bbe47a204d3157b4f9d090c679a750f9, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
 --- !u!114 &949838477306994832
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -150,13 +176,16 @@ AnimatorStateMachine:
     m_Position: {x: 400, y: 550, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 2476998479360743710}
-    m_Position: {x: 670, y: 470, z: 0}
+    m_Position: {x: 780, y: 460, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -3147882817099696762}
     m_Position: {x: 780, y: 550, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -5013781280727617103}
     m_Position: {x: 380, y: 470, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: 699441197249160548}
+    m_Position: {x: 810, y: 640, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
