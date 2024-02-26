@@ -35,8 +35,8 @@ public class AnimateAsad : MonoBehaviour
         
     }
 
-    public void StartWalking()
-    {
-        animator.Play("Turn180FromRight");
-    }
+    //public void StartWalking()
+    //{
+    //    animator.Play("Turn180FromRight");
+    //}
 }
