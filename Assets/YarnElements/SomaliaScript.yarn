@@ -33,7 +33,42 @@ tag:
     <<set $AsadVisted = true>>
     I will take you with me on my daily life here in Somalia.  #line:Asad02 
     Today, I have to collect water from the water pump, help rebuild houses that have been destroyed, and help look after my dad who is sick at home. #line:Asad03 
+    Come with me to the water pump.
+    // here call the start walking function
+    Every day is a struggle, a battle for survival.
+    The earth cracks beneath our feet, thirsting for water that never comes. Our crops wither away, leaving nothing but dust in their wake.
+    // reach water pump
+    Grab that bucket and pump the handle and water will be dispensed out.
+    // wait for water pump to finish
+    Great. We need to carry this home for my father now.
+    // start walking
+    My father is sick at the moment and he is unable to work.
+    I have to work for my family now instead of going to school.
+    I am trying to earn enough money to get my father the medication he needs.
+    I am working at the construction site where we are rebuilding the houses, can you help us there?
+    // walk to construction site
+    Many of the houses in my village have been bombed from the civil war.
+    It's a shadow that never leaves, lurking in every corner, tearing families apart, stealing innocent lives.
+    // reach construction site
+    We need to rebuild this house with the bricks, can you help me please?
+    Place the bricks to rebuild the walls.
+    // finish brick task
+    Thank you so much for help, we really apprieciate it so much.
+    // walk to pharmacy
+    We can now go to the pharmacy and get my fathers's medication.
+    // at pharmacy
+    Our medicine is on the table.
+    Thank you for your help at the constuction site, we couldnt have got this without your help.
+    // pharmacy to house
+    The help you have given us today is very kind.
+    You have helped us so much, life has been so difficult recently and it's the little things that make the biggesst difference.
+    // giving medicine to the father
+    We have your medicine father.
+    // ending
+    Thank you so much for your help.
+    I hope you can come again and could you answer some questions about your visit please.
+    Hit the question button to move on.
 
-    //here call the start walking function
+
 <<endif>>
 ===
