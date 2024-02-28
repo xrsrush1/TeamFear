@@ -3,11 +3,11 @@ Surviving in Somalia: An Empathy Machine VR Experience
 
 Welcome to Surviving in Somalia, an immersive virtual reality journey that invites you to experience life through the eyes of Asad, a local Somali boy residing in a small town in the Lower Shabelle region. Through this VR experience, you'll witness the daily struggles of survival amidst poverty, war, and drought, while offering your assistance and empathy to Asad and his family.
 
-About:
+**About:**
 
 Surviving in Somalia is more than just a VR app; it's an opportunity to gain a deeper understanding of the challenges faced by individuals living in war-torn and arid regions like Lower Shabelle. By immersing yourself in Asad's story, you'll develop empathy and compassion for those enduring adversity in their daily lives.
 
-Features
+**Features:**
 
 * Asad's Journey: Follow Asad as he navigates the challenges of collecting water, rebuilding his town after bombings, and caring for his family.
 * Realistic Environments: Immerse yourself in the sights and sounds of a small Somali town, from dusty streets to bustling marketplaces.
