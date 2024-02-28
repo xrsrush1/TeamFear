@@ -10,9 +10,13 @@ Surviving in Somalia is more than just a VR app; it's an opportunity to gain a d
 **Features:**
 ======================================================
 **1. Asad's Journey:** Follow Asad as he navigates the challenges of collecting water, rebuilding his town after bombings, and caring for his family.
+
 **2. Realistic Environments:** Immerse yourself in the sights and sounds of a small Somali town, from dusty streets to bustling marketplaces.
+
 **3. Interactive Tasks:** Assist Asad with daily tasks such as fetching water, aiding in reconstruction efforts, and providing support to his family.
+
 **4. Narrative-driven Experience:** Engage with a compelling storyline that highlights the resilience, courage, and humanity of individuals amidst crisis.
+
 **5. Educational Insights:** Gain insights into the root causes of the crisis in Somalia and learn about ongoing humanitarian efforts to provide aid and support to affected communities.
 
 **Screenshots & Videos:**
@@ -25,8 +29,11 @@ Youtube Link:
 **How to Use:**
 ======================================================
 **a. Download the Application:** [Insert link to download page]
+
 **b. Move APK to your headset:** Link your headset to your computer and move the app over.
+
 **c. Launch the Application:** Open the Surviving in Somalia Application on your headset.
+
 **d. Navigate the Scenes:** Use the controls on your VR headset to explore the scene and interact with NPCs.
 
 **Credits:**
