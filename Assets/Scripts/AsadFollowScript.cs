@@ -18,6 +18,9 @@ public class AsadFollowScript : MonoBehaviour
     public GameObject target3;
     public GameObject target4;
 
+    private GameObject _currentTarget;
+    public bool isWalking;
+
     [Header("Animator Elements")]
     public Animator AsadAnimator;
 
@@ -37,13 +40,17 @@ public class AsadFollowScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+       if (myNavMeshAgent.remainingDistance == 0 && isWalking)
+        {
+            AsadAnimator.Play("Idle");
+            isWalking = false;
+        }
     }
 
     [YarnCommand("walkToPump")]
     public void StartWalking()
     {
-        Debug.Log("We have entered the start talking func ");
+        Debug.Log("We have entered the start walking func ");
         bool hasAsadTalked;
 
         yarnInMemoryStorage.TryGetValue("$AsadTalked1", out hasAsadTalked);
@@ -57,8 +64,40 @@ public class AsadFollowScript : MonoBehaviour
             AsadAnimator.Play("Turn180fromRight");
             Debug.Log("Asad has turned");
             //this will make the npc go to target point
-            myNavMeshAgent.SetDestination(target1.transform.position);
+
+
+            _currentTarget = target1;
         }
         
+    }
+
+    [YarnCommand("walkToHouse1")]
+    public void StartWalkingToHouse()
+    {
+        Debug.Log("We have entered the go to house func ");
+        bool waterPumpFinished;
+
+        yarnInMemoryStorage.TryGetValue("$WaterPumpDone", out waterPumpFinished);
+        Debug.Log("Has water pump finished? ");
+        Debug.Log(waterPumpFinished);
+
+        if (waterPumpFinished)
+        {
+            Debug.Log("We have entered the if func to start anim");
+
+            AsadAnimator.Play("Turn180fromRight");
+            Debug.Log("Asad has turned");
+            //this will make the npc go to target point
+            myNavMeshAgent.SetDestination(target2.transform.position);
+            //if (myNavMeshAgent.remainingDistance == 0)
+            //    AsadAnimator.Play("Idle");
+        }
+
+    }
+
+    public void StartNavAgent()
+    {
+         myNavMeshAgent.SetDestination(_currentTarget.transform.position);
+        isWalking = true;
     }
 }

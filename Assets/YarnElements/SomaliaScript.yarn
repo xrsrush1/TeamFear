@@ -4,7 +4,7 @@ tag:
 <<declare $AminaVisted = false>>
 <<declare $AsadVisted = false>>
 <<declare $AsadTalked1 = false>>
-<<declare $AsadWaterPumpDone = false>>
+<<declare $WaterPumpDone = false>>
 
 // Starting dialogue for the young girl "Amina" to explain the situation in Somalia to the User.
 <<if $AminaVisted is false>>
@@ -41,18 +41,22 @@ tag:
     <<walkToPump Asad>>
 
 <<endif>>
-// ===
+===
 
-// title: AsadatWaterPump
-// tag:
-// ---
-    <<wait 10>>
+title: AtWaterPump
+tag:
+---
+    //<<wait 10>>
     //call this when asad reaches the water pump
-    Every day is a struggle, a battle for survival. #line:Asad05 
-    The earth cracks beneath our feet, thirsting for water that never comes. Our crops wither away, leaving nothing but dust in their wake. #line:Asad06 
-    Grab that bucket and pump the handle and water will be dispensed out. #line:Asad07 
-    Great. We need to carry this home for my father now. #line:Asad08 
-    <<set $AsadWaterPumpDone = true>>
+    Every day is a struggle, a battle for survival. #line:Fem01
+    The earth cracks beneath our feet, thirsting for water that never comes. Our crops wither away, leaving nothing but dust in their wake. #line:Fem02 
+    There is no water coming out of this water pump. All of us are just waiting in the hope of maybe a water tanker to come. #line:Fem03
+    <<set $WaterPumpDone = true>>
+
+    <<walkToHouse1 Asad>>
+    //Grab that bucket and pump the handle and water will be dispensed out. #line:Asad07 
+    //Great. We need to carry this home for my father now. #line:Asad08 
+    //<<set $AsadWaterPumpDone = true>>
 ===
 
 title: AsadatHouse1
