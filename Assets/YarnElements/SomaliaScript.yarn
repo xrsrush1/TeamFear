@@ -4,6 +4,7 @@ tag:
 <<declare $AminaVisted = false>>
 <<declare $AsadVisted = false>>
 <<declare $AsadTalked1 = false>>
+<<declare $AsadWaterPumpDone = false>>
 
 // Starting dialogue for the young girl "Amina" to explain the situation in Somalia to the User.
 <<if $AminaVisted is false>>
@@ -37,19 +38,21 @@ tag:
     Today, I have to collect water from the water pump, help rebuild houses that have been destroyed, and help look after my dad who is sick at home. #line:Asad03 
     Come with me to the water pump. #line:Asad04 
     <<set $AsadTalked1 = true>>
-    <<walkToPump YarnCommands>>
+    <<walkToPump Asad>>
 
 <<endif>>
-===
+// ===
 
-title: AsadatWaterPump
-tag:
----
+// title: AsadatWaterPump
+// tag:
+// ---
+    <<wait 10>>
     //call this when asad reaches the water pump
     Every day is a struggle, a battle for survival. #line:Asad05 
     The earth cracks beneath our feet, thirsting for water that never comes. Our crops wither away, leaving nothing but dust in their wake. #line:Asad06 
     Grab that bucket and pump the handle and water will be dispensed out. #line:Asad07 
     Great. We need to carry this home for my father now. #line:Asad08 
+    <<set $AsadWaterPumpDone = true>>
 ===
 
 title: AsadatHouse1
@@ -57,10 +60,10 @@ tag:
 ---
     // start walking
     //reach the house and start talking
-    My father is sick at the moment and he is unable to work. #line:0631aa1 
-    I have to work for my family now instead of going to school. #line:06fc314 
-    I am trying to earn enough money to get my father the medication he needs. #line:0bd874a 
-    I am working at the construction site where we are rebuilding the houses, can you help us there? #line:04c38f8
+    My father is sick at the moment and he is unable to work. #line:Asad09 
+    I have to work for my family now instead of going to school. #line:Asad10 
+    I am trying to earn enough money to get my father the medication he needs. #line:Asad11 
+    I am working at the construction site where we are rebuilding the houses, can you help us there? #line:Asad12
 ===
 
 title: AsadatFireHouse
@@ -68,18 +71,18 @@ tag:
 ---
 
     //call this when asad walks past the burning house
-    Many of the houses in my village have been bombed from the civil war. #line:038d7b4 
-    It's a shadow that never leaves, lurking in every corner, tearing families apart, stealing innocent lives. #line:0645bcf 
+    Many of the houses in my village have been bombed from the civil war. #line:Asad13 
+    It's a shadow that never leaves, lurking in every corner, tearing families apart, stealing innocent lives. #line:Asad14 
 ===
 title: AsadatSite
 tag:
 ---
     // reach construction site
-    We need to rebuild this house with the bricks, can you help me please? #line:0267467 
-    Place the bricks to rebuild the walls. #line:028040d 
-    Thank you so much for help, we really apprieciate it so much. #line:05718d2 
+    We need to rebuild this house with the bricks, can you help me please? #line:Asad15 
+    Place the bricks to rebuild the walls. #line:Asad16 
+    Thank you so much for help, we really appreciate it so much. #line:Asad17 
     // walk to pharmacy
-    We can now go to the pharmacy and get my fathers's medication after we finish this work. #line:0933146 
+    We can now go to the pharmacy and get my fathers's medication after we finish this work. #line:Asad18 
 ===
 
 title: AsadatStore
@@ -87,20 +90,20 @@ tag:
 ---
     
     // at pharmacy
-    Our medicine is on the table. Lets grab it and go home. #line:01b7819 
-    Thank you for your help at the constuction site, we couldnt have got this without your help. #line:0053909 
+    Our medicine is on the table. Lets grab it and go home. #line:Asad19 
+    Thank you for your help at the construction site, we couldnt have got this without your help. #line:Asad20 
 
 ===
 title: AsadatHouse2
 tag:
 ---
     // call this when asad reaches home
-    The help you have given us today is very kind. #line:07863b4 
-    You have helped us so much, life has been so difficult recently and it's the little things that make the biggesst difference. #line:038f0cd 
+    The help you have given us today is very kind. #line:Asad21 
+    You have helped us so much, life has been so difficult recently and it's the little things that make the biggesst difference. #line:Asad22 
     // giving medicine to the father
-    We have your medicine father. Keep the medicine next to my fathers bed on the table. #line:0b623f6 
+    We have your medicine father. Keep the medicine next to my fathers bed on the table. #line:Asad23 
     // ending
-    Thank you so much for your help. #line:0aa4f93 
-    I hope you can come again and could you answer some questions about your visit please. #line:0a2898c 
-    Hit the question button to move on. #line:0914f5b 
+    Thank you so much for your help. #line:Asad24 
+    I hope you can come again and could you answer some questions about your visit please. #line:Asad25 
+    Hit the question button to move on. #line:Asad26 
 ===

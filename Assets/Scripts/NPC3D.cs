@@ -83,9 +83,31 @@ public class NPC3D : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("the trigger happened");
         //if other is player
         if (other.gameObject.CompareTag("Player"))
         {
+            if (!string.IsNullOrEmpty(talkToNode))
+            {
+                if (dialogueCanvas != null)
+                {
+                    //move the Canvas to the object and off set
+                    canvasActive = true;
+                    dialogueCanvas.transform.SetParent(transform); // use the root to prevent scaling
+                    dialogueCanvas.GetComponent<RectTransform>().anchoredPosition3D = transform.TransformVector(PostionSpeachBubble);
+                }
+
+                if (dialogueRunner.IsDialogueRunning)
+                {
+                    dialogueRunner.Stop();
+                }
+                Debug.Log("start dialogue");
+                dialogueRunner.StartDialogue(talkToNode);
+            }
+        }
+        if (other.gameObject.CompareTag("Asad"))
+        {
+            Debug.Log("asad passed thru the trigger");
             if (!string.IsNullOrEmpty(talkToNode))
             {
                 if (dialogueCanvas != null)
