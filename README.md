@@ -17,7 +17,7 @@ Surviving in Somalia is more than just a VR app; it's an opportunity to gain a d
 
 **Screenshots & Videos:**
 ======================================================
-Here are some visuals to give you a sneak peek into the VR Regreening Africa Education Application:
+Here are some visuals to give you a sneak peek into the Surviving in Somalia Application:
 
 Watch a brief walkthrough on our YouTube video for a more in-depth preview.
 Youtube Link: 
