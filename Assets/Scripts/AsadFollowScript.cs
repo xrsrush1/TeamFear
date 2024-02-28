@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using Yarn.Unity;
 
 public class AsadFollowScript : MonoBehaviour
 {
@@ -17,8 +18,13 @@ public class AsadFollowScript : MonoBehaviour
     public GameObject target3;
     public GameObject target4;
 
+    [Header("Animator Elements")]
+    public Animator AsadAnimator;
+
     NavMeshAgent myNavMeshAgent;
     //it will store the nav mesh agent component of the current game obj on which this script is
+
+    public InMemoryVariableStorage yarnInMemoryStorage;
 
     // Start is called before the first frame update
     void Start()
@@ -30,12 +36,24 @@ public class AsadFollowScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //this will make the npc go to target point
-        myNavMeshAgent.SetDestination(target1.transform.position);
+        
     }
 
-    //public void StartWalking()
-    //{
-    //    animator.Play("Turn180FromRight");
-    //}
+    [YarnCommand("walkToPump")]
+    public void StartWalking()
+    {
+        bool hasAsadTalked;
+
+        yarnInMemoryStorage.TryGetValue("$AsadTalked1", out hasAsadTalked);
+        //Debug.Log("Has asad talked? ", this.hasAsadTalked);
+        Debug.Log(hasAsadTalked);
+
+        if(hasAsadTalked)
+        {
+            AsadAnimator.Play("Turn180FromRight");
+            //this will make the npc go to target point
+            myNavMeshAgent.SetDestination(target1.transform.position);
+        }
+        
+    }
 }

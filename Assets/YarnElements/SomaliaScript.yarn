@@ -3,6 +3,7 @@ tag:
 ---
 <<declare $AminaVisted = false>>
 <<declare $AsadVisted = false>>
+<<declare $AsadTalked1 = false>>
 
 // Starting dialogue for the young girl "Amina" to explain the situation in Somalia to the User.
 <<if $AminaVisted is false>>
@@ -29,46 +30,77 @@ tag:
 
 // Starting dialogue for the young boy "Asad", who is our guide to Somalia.
 <<if $AsadVisted is false>>
+
     Hello, my name is Asad. I live here in the Lower Shabelle region, on the outskirts of the capital, Mogadishu.  #line:Asad01 
     <<set $AsadVisted = true>>
     I will take you with me on my daily life here in Somalia.  #line:Asad02 
     Today, I have to collect water from the water pump, help rebuild houses that have been destroyed, and help look after my dad who is sick at home. #line:Asad03 
-    Come with me to the water pump.
-    // here call the start walking function
-    Every day is a struggle, a battle for survival.
-    The earth cracks beneath our feet, thirsting for water that never comes. Our crops wither away, leaving nothing but dust in their wake.
-    // reach water pump
-    Grab that bucket and pump the handle and water will be dispensed out.
-    // wait for water pump to finish
-    Great. We need to carry this home for my father now.
-    // start walking
-    My father is sick at the moment and he is unable to work.
-    I have to work for my family now instead of going to school.
-    I am trying to earn enough money to get my father the medication he needs.
-    I am working at the construction site where we are rebuilding the houses, can you help us there?
-    // walk to construction site
-    Many of the houses in my village have been bombed from the civil war.
-    It's a shadow that never leaves, lurking in every corner, tearing families apart, stealing innocent lives.
-    // reach construction site
-    We need to rebuild this house with the bricks, can you help me please?
-    Place the bricks to rebuild the walls.
-    // finish brick task
-    Thank you so much for help, we really apprieciate it so much.
-    // walk to pharmacy
-    We can now go to the pharmacy and get my fathers's medication.
-    // at pharmacy
-    Our medicine is on the table.
-    Thank you for your help at the constuction site, we couldnt have got this without your help.
-    // pharmacy to house
-    The help you have given us today is very kind.
-    You have helped us so much, life has been so difficult recently and it's the little things that make the biggesst difference.
-    // giving medicine to the father
-    We have your medicine father.
-    // ending
-    Thank you so much for your help.
-    I hope you can come again and could you answer some questions about your visit please.
-    Hit the question button to move on.
-
+    Come with me to the water pump. #line:Asad04 
+    <<set $AsadTalked1 = true>>
+    <<walkToPump YarnCommands>>
 
 <<endif>>
+===
+
+title: AsadatWaterPump
+tag:
+---
+    //call this when asad reaches the water pump
+    Every day is a struggle, a battle for survival. #line:Asad05 
+    The earth cracks beneath our feet, thirsting for water that never comes. Our crops wither away, leaving nothing but dust in their wake. #line:Asad06 
+    Grab that bucket and pump the handle and water will be dispensed out. #line:Asad07 
+    Great. We need to carry this home for my father now. #line:Asad08 
+===
+
+title: AsadatHouse1
+tag:
+---
+    // start walking
+    //reach the house and start talking
+    My father is sick at the moment and he is unable to work. #line:0631aa1 
+    I have to work for my family now instead of going to school. #line:06fc314 
+    I am trying to earn enough money to get my father the medication he needs. #line:0bd874a 
+    I am working at the construction site where we are rebuilding the houses, can you help us there? #line:04c38f8
+===
+
+title: AsadatFireHouse
+tag:
+---
+
+    //call this when asad walks past the burning house
+    Many of the houses in my village have been bombed from the civil war. #line:038d7b4 
+    It's a shadow that never leaves, lurking in every corner, tearing families apart, stealing innocent lives. #line:0645bcf 
+===
+title: AsadatSite
+tag:
+---
+    // reach construction site
+    We need to rebuild this house with the bricks, can you help me please? #line:0267467 
+    Place the bricks to rebuild the walls. #line:028040d 
+    Thank you so much for help, we really apprieciate it so much. #line:05718d2 
+    // walk to pharmacy
+    We can now go to the pharmacy and get my fathers's medication after we finish this work. #line:0933146 
+===
+
+title: AsadatStore
+tag:
+---
+    
+    // at pharmacy
+    Our medicine is on the table. Lets grab it and go home. #line:01b7819 
+    Thank you for your help at the constuction site, we couldnt have got this without your help. #line:0053909 
+
+===
+title: AsadatHouse2
+tag:
+---
+    // call this when asad reaches home
+    The help you have given us today is very kind. #line:07863b4 
+    You have helped us so much, life has been so difficult recently and it's the little things that make the biggesst difference. #line:038f0cd 
+    // giving medicine to the father
+    We have your medicine father. Keep the medicine next to my fathers bed on the table. #line:0b623f6 
+    // ending
+    Thank you so much for your help. #line:0aa4f93 
+    I hope you can come again and could you answer some questions about your visit please. #line:0a2898c 
+    Hit the question button to move on. #line:0914f5b 
 ===
