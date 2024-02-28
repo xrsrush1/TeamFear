@@ -13251,7 +13251,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: abbcdaff19aac604489d7efcff42049c, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1001 &276302752
 PrefabInstance:
@@ -23305,6 +23305,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Asad
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 877893404a351b040ab3bea9d04b52d6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Asad
+      objectReference: {fileID: 0}
     - target: {fileID: 926215472100687996, guid: 877893404a351b040ab3bea9d04b52d6,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -23888,7 +23893,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 1
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -23922,6 +23927,7 @@ MonoBehaviour:
   target3: {fileID: 1596688889}
   target4: {fileID: 1448269621}
   AsadAnimator: {fileID: 471691093}
+  myNavMeshAgent: {fileID: 471691094}
   yarnInMemoryStorage: {fileID: 1290606836}
 --- !u!1001 &472284725
 PrefabInstance:
@@ -27890,7 +27896,7 @@ PrefabInstance:
     - target: {fileID: 8278860449277872550, guid: defeca4d0ce720644b533d5b69797835,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10.220002
+      value: -10.375
       objectReference: {fileID: 0}
     - target: {fileID: 8278860449277872550, guid: defeca4d0ce720644b533d5b69797835,
         type: 3}
@@ -30568,6 +30574,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 619310851}
+  - component: {fileID: 619310852}
   m_Layer: 0
   m_Name: NextSceneSetup
   m_TagString: Untagged
@@ -30584,13 +30591,25 @@ Transform:
   m_GameObject: {fileID: 619310850}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.439}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 252531621}
   m_Father: {fileID: 150612069}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &619310852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619310850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13e207a9eb5923b4aa067ab297a93c65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &623923950 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5539238728919912078, guid: d75657c8b08839e40a8e733fed278dd8,
@@ -41464,6 +41483,7 @@ Transform:
   - {fileID: 1290606832}
   - {fileID: 424243564}
   - {fileID: 319993981}
+  - {fileID: 1174607944}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &889045965
@@ -52991,6 +53011,62 @@ MonoBehaviour:
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 0}
   m_BuildHeightMesh: 0
+--- !u!1 &1174607943
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1174607944}
+  - component: {fileID: 1174607945}
+  m_Layer: 0
+  m_Name: YarnCommandsAsad
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1174607944
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174607943}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 880687722}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1174607945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174607943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a35a2aaa00817b419540f298b665714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAsad: 0
+  goToTarget1: 0
+  goToTarget2: 0
+  goToTarget3: 0
+  goToTarget4: 0
+  target1: {fileID: 1310822674}
+  target2: {fileID: 1731849687}
+  target3: {fileID: 1596688889}
+  target4: {fileID: 1448269621}
+  AsadAnimator: {fileID: 471691093}
+  myNavMeshAgent: {fileID: 471691094}
+  yarnInMemoryStorage: {fileID: 1290606836}
 --- !u!1001 &1176780203
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54654,7 +54730,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1215175069}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 619310852}
+        m_TargetAssemblyTypeName: SceneChangeScript, Assembly-CSharp
+        m_MethodName: LoadQuestionScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1215175069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89076,7 +89164,7 @@ PrefabInstance:
     - target: {fileID: 4265502871271991535, guid: a5692252a65d2784fad5bd6673ab750f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10.200002
+      value: -10.353
       objectReference: {fileID: 0}
     - target: {fileID: 4265502871271991535, guid: a5692252a65d2784fad5bd6673ab750f,
         type: 3}
@@ -101958,7 +102046,6 @@ GameObject:
   - component: {fileID: 2116644216}
   - component: {fileID: 2116644215}
   - component: {fileID: 2116644214}
-  - component: {fileID: 2116644213}
   m_Layer: 0
   m_Name: AITriggerWaterPump
   m_TagString: Untagged
@@ -101981,25 +102068,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1059978212}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2116644213
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2116644211}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2b4caa1230bfb1408126be475b8213d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  characterName: Asad
-  talkToNode: AsadatWaterPump
-  scriptToLoad: {fileID: 7545569452688597077, guid: 57f7539861a6deb4e87ffafbd0a01255,
-    type: 3}
-  dialogueRunner: {fileID: 0}
-  dialogueCanvas: {fileID: 0}
-  PostionSpeachBubble: {x: 0, y: 2, z: 0}
 --- !u!65 &2116644214
 BoxCollider:
   m_ObjectHideFlags: 0
