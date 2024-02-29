@@ -7,6 +7,7 @@ TagManager:
   - Dialogue Canvas
   - Amina
   - Asad
+  - QuestBtn
   layers:
   - Default
   - TransparentFX
