@@ -5,6 +5,9 @@ tag:
 <<declare $AsadVisted = false>>
 <<declare $AsadTalked1 = false>>
 <<declare $WaterPumpDone = false>>
+<<declare $metFather = false>>
+<<declare $finishedSiteWork = false>>
+<<declare $finishedStoreWork = false>>
 
 // Starting dialogue for the young girl "Amina" to explain the situation in Somalia to the User.
 <<if $AminaVisted is false>>
@@ -46,39 +49,40 @@ tag:
 title: AtWaterPump
 tag:
 ---
-    //<<wait 10>>
-    //call this when asad reaches the water pump
+    //call this when asad reaches the water pump: lady will talk here
     Every day is a struggle, a battle for survival. #line:Fem01
     The earth cracks beneath our feet, thirsting for water that never comes. Our crops wither away, leaving nothing but dust in their wake. #line:Fem02 
     There is no water coming out of this water pump. All of us are just waiting in the hope of maybe a water tanker to come. #line:Fem03
+    Follow Asad to his house to check on his father, he is sick. #line:Fem04 
     <<set $WaterPumpDone = true>>
 
     <<walkToHouse1 Asad>>
-    //Grab that bucket and pump the handle and water will be dispensed out. #line:Asad07 
-    //Great. We need to carry this home for my father now. #line:Asad08 
-    //<<set $AsadWaterPumpDone = true>>
 ===
 
 title: AsadatHouse1
 tag:
 ---
-    // start walking
-    //reach the house and start talking
-    My father is sick at the moment and he is unable to work. #line:Asad09 
-    I have to work for my family now instead of going to school. #line:Asad10 
-    I am trying to earn enough money to get my father the medication he needs. #line:Asad11 
-    I am working at the construction site where we are rebuilding the houses, can you help us there? #line:Asad12
+    //asad will reach the house and his sister will start talking
+    Hello, I am Asad's sister. As you can see inside the house, our father is sick at the moment and he is unable to work. #line:Sister01 
+    Asad has to work for my family now, and i am at home, instead of going to school. #line:Sister02
+    He is trying to earn enough money to get my father the medication he needs. #line:Sister03
+    He is working at the construction site where we are rebuilding the houses, can you help us there? #line:Sister04
+    Follow Asad to the construction site. #line:Sister05 
+    <<set $metFather = true>>
+
+    <<walkToSite Asad>>
 ===
 
-title: AsadatFireHouse
+title: AtFireHouse
 tag:
 ---
 
     //call this when asad walks past the burning house
-    Many of the houses in my village have been bombed from the civil war. #line:Asad13 
-    It's a shadow that never leaves, lurking in every corner, tearing families apart, stealing innocent lives. #line:Asad14 
+    Many of the houses in my village have been bombed from the civil war. #line:FireMan01
+    It's a shadow that never leaves, lurking in every corner, tearing families apart, stealing innocent lives. #line:FireMan02 
+    This house here caught fire again and took away everything from the man inside. He has no where to go. #line:FireMan03
 ===
-title: AsadatSite
+title: AtSite
 tag:
 ---
     // reach construction site
@@ -87,6 +91,10 @@ tag:
     Thank you so much for help, we really appreciate it so much. #line:Asad17 
     // walk to pharmacy
     We can now go to the pharmacy and get my fathers's medication after we finish this work. #line:Asad18 
+    <<wait  30>> //wait for the player to do the task
+    <<set $finishedSiteWork = true>>
+
+    <<walkToStore Asad>>
 ===
 
 title: AsadatStore
@@ -94,9 +102,12 @@ tag:
 ---
     
     // at pharmacy
-    Our medicine is on the table. Lets grab it and go home. #line:Asad19 
-    Thank you for your help at the construction site, we couldnt have got this without your help. #line:Asad20 
+    Hello guys, your medicine is on the table.  #line:StoreOwner01
+    You can take it and go home. Send my regards to Asad's Father. #line:StoreOwner02
 
+    <<set $finishedStoreWork = true>>
+
+    <<walkBackHome Asad>>
 ===
 title: AsadatHouse2
 tag:

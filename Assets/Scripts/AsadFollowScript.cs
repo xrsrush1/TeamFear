@@ -30,21 +30,33 @@ public class AsadFollowScript : MonoBehaviour
 
     public InMemoryVariableStorage yarnInMemoryStorage;
 
+    //public NPC3D npc3dScript;
+
+    public GameObject QuestionBtn;
+
     // Start is called before the first frame update
     void Start()
     {
         //myNavMeshAgent = GetComponent<NavMeshAgent>();
         //take ref of nav mesh agent component of the current game obj
+
+        QuestionBtn = GameObject.FindGameObjectWithTag("QuestBtn");
+
+        if (QuestionBtn == null)
+            Debug.LogError("Question button not found");
+
+        QuestionBtn.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
        if (myNavMeshAgent.remainingDistance == 0 && isWalking)
-        {
+       {
             AsadAnimator.Play("Idle");
+            Debug.Log("asad reached the destination");
             isWalking = false;
-        }
+       }
     }
 
     [YarnCommand("walkToPump")]
@@ -65,8 +77,7 @@ public class AsadFollowScript : MonoBehaviour
             Debug.Log("Asad has turned");
             //this will make the npc go to target point
 
-
-            _currentTarget = target1;
+            _currentTarget = target1; //target set as water pump
         }
         
     }
@@ -87,17 +98,81 @@ public class AsadFollowScript : MonoBehaviour
 
             AsadAnimator.Play("Turn180fromRight");
             Debug.Log("Asad has turned");
-            //this will make the npc go to target point
-            myNavMeshAgent.SetDestination(target2.transform.position);
-            //if (myNavMeshAgent.remainingDistance == 0)
-            //    AsadAnimator.Play("Idle");
-        }
 
+            _currentTarget = target4; //target set as house
+
+        }
     }
 
+    [YarnCommand("walkToSite")]
+    public void StartWalkingToSite()
+    {
+        Debug.Log("We have entered the go to site func ");
+        bool metFatherFinished;
+
+        yarnInMemoryStorage.TryGetValue("$metFather", out metFatherFinished);
+        Debug.Log("meeting father finished? ");
+        Debug.Log(metFatherFinished);
+
+        if (metFatherFinished)
+        {
+            Debug.Log("We have entered the if func to start anim");
+
+            AsadAnimator.Play("Turn180fromRight");
+            Debug.Log("Asad has turned & started walking");
+  
+            _currentTarget = target2; //target set as site
+            //npc3dScript.talkToNode = "AsadatSite";
+
+        }
+    }
+
+    [YarnCommand("walkToStore")]
+    public void StartWalkingToStore()
+    {
+        Debug.Log("We have entered the go to store func ");
+        bool siteWorkFinished;
+
+        yarnInMemoryStorage.TryGetValue("$finishedSiteWork", out siteWorkFinished);
+        Debug.Log("site work finished? ");
+        Debug.Log(siteWorkFinished);
+
+        if (siteWorkFinished)
+        {
+            Debug.Log("We have entered the if func to start anim");
+
+            AsadAnimator.Play("Turn180fromRight");
+            Debug.Log("Asad has turned & started walking");
+
+            _currentTarget = target3; //target set as store
+        }
+    }
+
+    [YarnCommand("walkBackHome")]
+    public void StartWalkingBackHome()
+    {
+        Debug.Log("We have entered the go back to home func ");
+        bool storeWorkFinished;
+
+        yarnInMemoryStorage.TryGetValue("$finishedStoreWork", out storeWorkFinished);
+        Debug.Log("store work finished? ");
+        Debug.Log(storeWorkFinished);
+
+        if (storeWorkFinished)
+        {
+            Debug.Log("We have entered the if func to start anim");
+
+            AsadAnimator.Play("Turn180fromRight");
+            Debug.Log("Asad has turned & started walking");
+
+            _currentTarget = target4; //target set as home
+            QuestionBtn.gameObject.SetActive(true); //activating the button
+        }
+    }
+    
     public void StartNavAgent()
     {
          myNavMeshAgent.SetDestination(_currentTarget.transform.position);
-        isWalking = true;
+         isWalking = true;
     }
 }
