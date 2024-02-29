@@ -16,12 +16,6 @@ public class QuestionRecords : MonoBehaviour
         //PlayerPrefs.GetFloat("timetaken", "_value");
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void UpdateQuestionValue()
     {
         question1Value = (int)question1Slider.value;
