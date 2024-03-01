@@ -53,9 +53,7 @@ public class AirtableManager : MonoBehaviour
         {
             // Log the response from the API
             Debug.Log("Record created: " + response);
-                   
-
-            
+                        
         }, jsonFields));
     }
 
