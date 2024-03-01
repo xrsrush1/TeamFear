@@ -22,9 +22,19 @@ Surviving in Somalia is more than just a VR app; it's an opportunity to gain a d
 **Screenshots & Videos:**
 ======================================================
 Here are some visuals to give you a sneak peek into the Surviving in Somalia Application:
+![image](https://github.com/xrsrush1/TeamFear/assets/147525236/17af8f00-a4ed-4ecf-8ba0-a0b99ea1a331)
+
+![image](https://github.com/xrsrush1/TeamFear/assets/147525236/e41131f2-e12a-4f05-9def-adc84a6995a9)
+
+![image](https://github.com/xrsrush1/TeamFear/assets/147525236/23f183eb-ec0b-4d2b-90e6-9699e67b9ec2)
+
+![image](https://github.com/xrsrush1/TeamFear/assets/147525236/0d7838e6-a9a3-475e-a258-087461c58dd6)
+
+![image](https://github.com/xrsrush1/TeamFear/assets/147525236/5c6e57b4-7e68-4380-97c3-1cbe12b8b890)
+
 
 Watch a brief walkthrough on our YouTube video for a more in-depth preview.
-Youtube Link: 
+Youtube Link: https://www.youtube.com/watch?v=meYOl9ZRSy4 
 
 **How to Use:**
 ======================================================
@@ -38,3 +48,20 @@ Youtube Link:
 
 **Credits:**
 ======================================================
+**a.	Models used:**
+1.	Torch Light: https://assetstore.unity.com/packages/3d/environments/historic/historic-environment-142116 
+2.	Dessert assets: https://assetstore.unity.com/packages/3d/environments/vr-scenes-2-141183
+3.	Colourful Hierarchy: https://assetstore.unity.com/packages/tools/utilities/colourful-hierarchy-category-gameobject-205934
+4.	Wooden Bucket: https://assetstore.unity.com/packages/3d/props/interior/wood-bucket-standard-dirty-225622
+5.	Dessert Buildings: https://assetstore.unity.com/packages/3d/environments/urban/desert-buildings-modular-144178
+6.	Skybox: https://assetstore.unity.com/packages/2d/textures-materials/sky/free-stylized-hand-painted-skybox-265475
+7.	Medical Shelf: https://assetstore.unity.com/packages/3d/props/interior/shelf-646
+8.	Characters from Rocket box
+9.	Medicine: https://assetstore.unity.com/packages/3d/props/tools/survival-game-tools-139872
+
+**b.	Videos used:**
+1.	Somalia suffering worst drought in decades.
+Link: https://youtu.be/8pk6KZQDSaw?si=xy6JmgCXoSitd_Ik
+2.	Huge fire destroys market in Somalia.
+Link: https://youtu.be/5w43QYoVAH8?si=uRvxUfUElqwdky6_ 
+
