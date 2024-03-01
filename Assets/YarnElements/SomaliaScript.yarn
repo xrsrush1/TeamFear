@@ -105,20 +105,11 @@ tag:
     Hello guys, your medicine is on the table.  #line:StoreOwner01
     You can take it and go home. Send my regards to Asad's Father. #line:StoreOwner02
 
+    The help you have given us today is very kind. #line:StoreOwner03 
+    You have helped us so much, life has been so difficult recently and it's the little things that make the biggesst difference. #line:StoreOwner04 
+    I hope you can come again and could you answer some questions about your visit please. Hit the question button to move on. #line:StoreOwner05
+    //Hit the question button to move on. #line:StoreOwner06 
     <<set $finishedStoreWork = true>>
 
-    <<walkBackHome Asad>>
-===
-title: AsadatHouse2
-tag:
----
-    // call this when asad reaches home
-    The help you have given us today is very kind. #line:Asad21 
-    You have helped us so much, life has been so difficult recently and it's the little things that make the biggesst difference. #line:Asad22 
-    // giving medicine to the father
-    We have your medicine father. Keep the medicine next to my fathers bed on the table. #line:Asad23 
-    // ending
-    Thank you so much for your help. #line:Asad24 
-    I hope you can come again and could you answer some questions about your visit please. #line:Asad25 
-    Hit the question button to move on. #line:Asad26 
+    //<<walkBackHome Asad>>
 ===

@@ -148,27 +148,27 @@ public class AsadFollowScript : MonoBehaviour
         }
     }
 
-    [YarnCommand("walkBackHome")]
-    public void StartWalkingBackHome()
-    {
-        Debug.Log("We have entered the go back to home func ");
-        bool storeWorkFinished;
+    //[YarnCommand("walkBackHome")]
+    //public void StartWalkingBackHome()
+    //{
+    //    Debug.Log("We have entered the go back to home func ");
+    //    bool storeWorkFinished;
 
-        yarnInMemoryStorage.TryGetValue("$finishedStoreWork", out storeWorkFinished);
-        Debug.Log("store work finished? ");
-        Debug.Log(storeWorkFinished);
+    //    yarnInMemoryStorage.TryGetValue("$finishedStoreWork", out storeWorkFinished);
+    //    Debug.Log("store work finished? ");
+    //    Debug.Log(storeWorkFinished);
 
-        if (storeWorkFinished)
-        {
-            Debug.Log("We have entered the if func to start anim");
+    //    if (storeWorkFinished)
+    //    {
+    //        Debug.Log("We have entered the if func to start anim");
 
-            AsadAnimator.Play("Turn180fromRight");
-            Debug.Log("Asad has turned & started walking");
+    //        AsadAnimator.Play("Turn180fromRight");
+    //        Debug.Log("Asad has turned & started walking");
 
-            _currentTarget = target4; //target set as home
-            QuestionBtn.gameObject.SetActive(true); //activating the button
-        }
-    }
+    //        _currentTarget = target4; //target set as home
+    //        QuestionBtn.gameObject.SetActive(true); //activating the button
+    //    }
+    //}
     
     public void StartNavAgent()
     {
