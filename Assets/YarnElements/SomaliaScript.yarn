@@ -91,7 +91,7 @@ tag:
     Thank you so much for help, we really appreciate it so much. #line:Asad17 
     // walk to pharmacy
     We can now go to the pharmacy and get my fathers's medication after we finish this work. #line:Asad18 
-    <<wait  30>> //wait for the player to do the task
+    <<wait  120>> //wait for the player to do the task
     <<set $finishedSiteWork = true>>
 
     <<walkToStore Asad>>
